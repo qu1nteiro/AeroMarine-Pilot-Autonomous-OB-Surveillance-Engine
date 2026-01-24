@@ -44,7 +44,7 @@ aeromarine-pilot/
 ├── src/                # Core engine (Merger, Training, Showcase scripts)
 ├── maritime_v2.yaml    # Dataset configuration contract
 ├── .gitignore          # Exclusion rules (PyCharm/Large Data)
-└── README.txt          # Project overview
+└── README.md          # Project overview
 
 
 USAGE
