@@ -1,0 +1,12 @@
+# FILE: maritime_v2.yaml
+# Optimized for V2.1: Specialized Maritime Vessel Detection
+# Focused on high-precision ship/boat identification
+
+# Absolute paths for Arch Linux environment
+path: /home/eduardo/Documents/computacional/aia/aeromarine-pilot/data_v2
+train: images/train
+val: images/val
+
+# Target Classes
+names:
+  0: Vessel # Merged Ship + Boat (Zenodo & HRSC2016)

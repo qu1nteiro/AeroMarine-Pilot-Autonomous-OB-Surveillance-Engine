@@ -1,0 +1,34 @@
+# --- DATASETS ---
+data_v2/
+data_raw/
+archive/v1/data/
+data/
+
+# --- PESOS E LOGS ---
+runs/
+*.pt
+*.onnx
+*.engine
+
+# --- RESULTADOS (Imagens geradas durante testes) ---
+results/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+
+# --- PYCHARM & IDE SPECIFIC ---
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# --- PYTHON & AMBIENTE VIRTUAL ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.ipynb_checkpoints/
+
