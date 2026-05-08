@@ -7,12 +7,14 @@ DATE: January 2026
 """
 
 from ultralytics import YOLO
+from pathlib import Path
 import os
 
 # --- CONFIGURATION (Setup) ---
+PROJECT_ROOT  = Path(__file__).resolve().parent.parent
 MODEL_VARIANT = "yolov8n-obb.pt"
-DATA_CONFIG   = "maritime_v2.yaml"
-PROJECT_NAME  = "AeroMarine-Surveillance-V2"
+DATA_CONFIG   = PROJECT_ROOT / "maritime_v2.yaml"
+PROJECT_NAME  = str(PROJECT_ROOT / "runs/obb/AeroMarine-Surveillance-V2")
 RUN_NAME      = "OBB-Vessel-Expert-V2-1"
 
 def train_v2_expert():
@@ -25,7 +27,7 @@ def train_v2_expert():
     # 2. Fire the optimized engine
     model.train(
         # --- Data & Contract ---
-        data=DATA_CONFIG,
+        data=str(DATA_CONFIG),
         epochs=100,
         imgsz=640,
         project=PROJECT_NAME,
