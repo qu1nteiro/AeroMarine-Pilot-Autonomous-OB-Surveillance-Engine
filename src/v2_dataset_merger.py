@@ -11,7 +11,7 @@ import shutil
 from pathlib import Path
 
 # --- CONFIGURATION (Macros) ---
-PROJECT_ROOT = Path("/home/eduardo/Documents/computacional/aia/aeromarine-pilot")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 V1_BASE      = PROJECT_ROOT / "archive/v1/data/processed"
 ZENODO_BASE  = PROJECT_ROOT / "data_raw/zenodo_aerial"
 OUTPUT_V2    = PROJECT_ROOT / "data_v2"
@@ -115,6 +115,10 @@ def process_zenodo():
 def main():
     # Setup Workspace
     if OUTPUT_V2.exists():
+        answer = input(f"[WARN] '{OUTPUT_V2}' already exists. Delete and rebuild? [y/N] ").strip().lower()
+        if answer != "y":
+            print("[ABORT] Operation cancelled.")
+            return
         print(f"[LOG] Cleaning up old directory: {OUTPUT_V2}")
         shutil.rmtree(OUTPUT_V2)
 

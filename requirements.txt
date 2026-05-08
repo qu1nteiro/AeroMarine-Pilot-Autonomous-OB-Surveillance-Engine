@@ -1,0 +1,22 @@
+# Core — direct dependency
+ultralytics==8.4.7
+
+# Deep learning backend (CUDA 12.8 build — adjust for your CUDA version)
+# CPU-only alternative: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch==2.9.1+cu128
+torchvision==0.24.1+cu128
+
+# Ultralytics runtime dependencies
+numpy==2.4.1
+opencv-python==4.11.0
+Pillow==12.1.0
+PyYAML==6.0.3
+matplotlib==3.10.8
+scipy==1.17.0
+psutil==7.2.1
+requests==2.32.5
+tqdm==4.67.1
+pandas==3.0.0
+seaborn==0.13.2
+polars==1.37.1
+ultralytics-thop==2.0.18

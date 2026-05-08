@@ -8,7 +8,6 @@ DATE: January 2026
 
 from ultralytics import YOLO
 import os
-import shutil
 
 # --- CONFIGURATION (Setup) ---
 MODEL_VARIANT = "yolov8n-obb.pt"

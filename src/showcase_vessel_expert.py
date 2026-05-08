@@ -11,7 +11,7 @@ from ultralytics import YOLO
 from pathlib import Path
 
 # --- CONFIGURATION (Macros) ---
-PROJECT_ROOT = Path("/home/eduardo/Documents/computacional/aia/aeromarine-pilot")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 BEST_WEIGHTS = PROJECT_ROOT / "runs/obb/AeroMarine-Surveillance-V2/OBB-Vessel-Expert-V2-1/weights/best.pt"
 VAL_IMAGES = PROJECT_ROOT / "data_v2/images/val"
 OUTPUT_DIR = PROJECT_ROOT / "results/final_showcase"
@@ -42,7 +42,7 @@ def run_expert_showcase():
         print(f"[LOG] Processing: {img_path.name}")
 
         # Inference
-        results = model.predict(
+        model.predict(
             source=img_path,
             conf=0.4,  # High confidence for a clean showcase
             save=True,

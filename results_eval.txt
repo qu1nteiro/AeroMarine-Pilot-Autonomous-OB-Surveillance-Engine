@@ -1,0 +1,23 @@
+==================================================
+  AeroMarine-Pilot — Evaluation Results
+==================================================
+
+[ Validation Metrics ]
+  Precision      : 0.9767
+  Recall         : 0.9693
+  mAP@0.50       : 0.9875
+  mAP@0.50-0.95  : 0.8441
+
+[ Inference Speed (from model.val) ]
+  Preprocess     : 0.42 ms/img
+  Inference      : 1.90 ms/img
+  Postprocess    : 1.60 ms/img
+
+[ Standalone Benchmark (200 runs, single image) ]
+  Mean latency   : 12.38 ms
+  Throughput     : 80.8 FPS
+
+[ Configuration ]
+  Weights        : runs/obb/AeroMarine-Surveillance-V2/OBB-Vessel-Expert-V2-1/weights/best.pt
+  Dataset config : maritime_v2.yaml
+==================================================
